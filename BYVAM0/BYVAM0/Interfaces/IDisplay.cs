@@ -8,10 +8,14 @@ namespace BYVAM0.Interfaces
 {
     internal interface IDisplay
     {
-        public void GreetUser();
+        void GreetUser();
 
-        public void DisplayQuestion(string question);
+        void DisplayQuestion(string question);
 
-        public void WriteLine(string line);
+        Task DisplayCatFact(Task<string> fact);
+
+        void EndProgram();
+
+        void WriteLine(string line);
     }
 }
