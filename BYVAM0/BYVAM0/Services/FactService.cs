@@ -26,22 +26,29 @@ namespace BYVAM0.Services
 
         private async Task<string?> GetFactFromApi()
         {
-            using var response = await _httpClient.GetAsync("/fact");
-
-            if (response.IsSuccessStatusCode)
+            try
             {
-                var responseText = await response.Content.ReadAsStringAsync();
+                using var response = await _httpClient.GetAsync("/fact");
 
-                if (responseText is null)
+                if (response.IsSuccessStatusCode)
+                {
+                    var responseText = await response.Content.ReadAsStringAsync();
+
+                    if (responseText is null)
+                    {
+                        return null;
+                    }
+
+                    var fact = ParseResponse(responseText);
+
+                    return fact;
+                }
+                else
                 {
                     return null;
                 }
-
-                var fact = ParseResponse(responseText);
-
-                return fact;
             }
-            else
+            catch (HttpRequestException)
             {
                 return null;
             }
