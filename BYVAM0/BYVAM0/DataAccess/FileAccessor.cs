@@ -28,5 +28,19 @@ namespace BYVAM0.DataAccess
                 return null;
             }
         }
+
+        public bool WriteResults(string filePath, string htmlPage)
+        {
+            try
+            {
+                File.WriteAllText(filePath, htmlPage);
+                return true;
+            }
+            catch (Exception ex) when (ex is DirectoryNotFoundException
+                                       || ex is UnauthorizedAccessException)
+            {
+                return false;
+            }
+        }
     }
 }
