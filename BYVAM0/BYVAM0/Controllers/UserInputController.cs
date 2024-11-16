@@ -50,7 +50,7 @@ namespace BYVAM0.Controllers
             foreach (var question in questions)
             {
                 _display.DisplayQuestion(question.Text);
-                answers.Add(ReadAnswer());
+                answers.Add(ReadAnswer() * question.Weight);
             }
 
             return answers;
