@@ -8,6 +8,7 @@ namespace BYVAM0.Interfaces
 {
     internal interface IInputReader
     {
-        public string? ReadLine();
+        string? ReadLine();
+        ConsoleKeyInfo ReadKey();
     }
 }

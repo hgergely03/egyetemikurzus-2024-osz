@@ -14,5 +14,10 @@ namespace BYVAM0.Controllers
         {
             return Console.ReadLine();
         }
+
+        public ConsoleKeyInfo ReadKey()
+        {
+            return Console.ReadKey();
+        }
     }
 }
