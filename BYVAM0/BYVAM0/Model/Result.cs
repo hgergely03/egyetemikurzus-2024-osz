@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BYVAM0.Model
 {
-    internal record Result
+    public record Result
     {
         public required Cat Cat { get; init; }
         public required string Description { get; init; }

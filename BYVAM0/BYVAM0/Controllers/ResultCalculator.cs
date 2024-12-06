@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
+﻿using System.Numerics;
 using System.Text;
-using System.Threading.Tasks;
-
 using BYVAM0.Model;
 
 namespace BYVAM0.Controllers
 {
-    internal static class ResultCalculator
+    public static class ResultCalculator
     {
         private static int NormalizeAnswer(int answer)
         {

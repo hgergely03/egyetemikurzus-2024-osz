@@ -4,7 +4,7 @@ using BYVAM0.Interfaces;
 
 namespace BYVAM0.Services
 {
-    internal class FactService : IFactService
+    public class FactService : IFactService
     {
         private readonly HttpClient _httpClient;
 

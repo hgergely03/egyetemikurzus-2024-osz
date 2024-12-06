@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BYVAM0.Interfaces
 {
-    internal interface IInputReader
+    public interface IInputReader
     {
         string? ReadLine();
         ConsoleKeyInfo ReadKey();

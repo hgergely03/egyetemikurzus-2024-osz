@@ -1,12 +1,10 @@
 ﻿using System.Text.Json;
-using System;
-
 using BYVAM0.Model;
 using BYVAM0.Interfaces;
 
 namespace BYVAM0.DataAccess
 {
-    internal class FileAccessor : IDataAccess
+    public class FileAccessor : IDataAccess
     {
         private static readonly JsonSerializerOptions Options = new()
         {

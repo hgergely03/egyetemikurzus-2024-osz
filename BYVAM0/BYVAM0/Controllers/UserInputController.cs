@@ -3,7 +3,7 @@ using BYVAM0.Model;
 
 namespace BYVAM0.Controllers
 {
-    internal class UserInputController
+    public class UserInputController
     {
         private const int MIN_ANSWER = 0;
         private const int MAX_ANSWER = 10;

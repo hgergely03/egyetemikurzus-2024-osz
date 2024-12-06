@@ -8,7 +8,7 @@ using BYVAM0.Model;
 
 namespace BYVAM0.Interfaces
 {
-    internal interface IDisplay
+    public interface IDisplay
     {
         void GreetUser();
         void DisplayQuestion(string question);

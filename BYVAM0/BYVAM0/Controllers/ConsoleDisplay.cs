@@ -42,7 +42,7 @@ namespace BYVAM0.Controllers
         public void DisplayResult(Result result)
         {
             Console.WriteLine(result.Description);
-            Console.WriteLine($"You are a {result.Cat.LowerCat()} cat");
+            Console.WriteLine($"You are a(n) {result.Cat.LowerCat()} cat");
         }
 
         public void EndProgram(bool htmlCreationSuccessful, string filePath)
